@@ -1,15 +1,20 @@
 # Gerador-de-CPF-em-Python
 
 from random import randint
+
 numero = str(randint(100000000, 999999999))
 
 novo_cpf = numero                   # Elimina os dois ultimos digitos do CPF
+
 reverso = 10                            # Contador reverso
+
 total = 0
 
 # Loop do CPF
 for index in range(19):
+
     if index > 8:                       # Primeiro índice vai de 0 a 9
+    
         index -= 9                      # São os 9 primeiros digitos do CPF
 
     total += int(novo_cpf[index]) * reverso  # Valor total da multiplicação
